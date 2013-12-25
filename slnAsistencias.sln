@@ -3,12 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prjAsistencias", "prjAsistencias\prjAsistencias.csproj", "{81FD0941-1632-42BA-9EBB-BF08F3DCE8B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prjAsistenciasCliente", "prjAsistenciasCliente\prjAsistenciasCliente.csproj", "{177BC064-9ADC-4526-A5B6-9E95CC2D2962}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{177BC064-9ADC-4526-A5B6-9E95CC2D2962}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{177BC064-9ADC-4526-A5B6-9E95CC2D2962}.Debug|x86.Build.0 = Debug|Any CPU
+		{177BC064-9ADC-4526-A5B6-9E95CC2D2962}.Release|x86.ActiveCfg = Release|Any CPU
+		{177BC064-9ADC-4526-A5B6-9E95CC2D2962}.Release|x86.Build.0 = Release|Any CPU
 		{81FD0941-1632-42BA-9EBB-BF08F3DCE8B2}.Debug|x86.ActiveCfg = Debug|x86
 		{81FD0941-1632-42BA-9EBB-BF08F3DCE8B2}.Debug|x86.Build.0 = Debug|x86
 		{81FD0941-1632-42BA-9EBB-BF08F3DCE8B2}.Release|x86.ActiveCfg = Release|x86

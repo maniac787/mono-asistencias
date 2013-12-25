@@ -25,7 +25,7 @@ namespace prjAsistencias {
        //        CREATE TABLE employee (
        //           firstname varchar(32),
        //           lastname varchar(32));
-			string sql = "SELECT usr_id, usr_name FROM smx_user";
+		string sql = "SELECT usr_id, usr_name FROM smx_user";
 
 
        dbcmd.CommandText = sql;
