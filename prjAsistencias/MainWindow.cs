@@ -1,7 +1,7 @@
 using System;
 using Gtk;
 using prjAsistencias;
-
+using org.maniacSoft.util.conexion;
 public partial class MainWindow: Gtk.Window
 {	
 	public MainWindow (): base (Gtk.WindowType.Toplevel)
@@ -24,8 +24,9 @@ public partial class MainWindow: Gtk.Window
         md.Run ();
         md.Destroy(); 
 		*/
-		
-		
+
+
+		PostgreSqlConexion.Instance.iniciar();
 		ListStore store = new ListStore(typeof (string));
 		
 		
