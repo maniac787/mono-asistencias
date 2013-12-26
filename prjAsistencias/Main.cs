@@ -1,6 +1,6 @@
 using System;
 using Gtk;
-
+using org.maniacSoft.form.login;
 namespace prjAsistencias
 {
 	class MainClass
@@ -8,7 +8,7 @@ namespace prjAsistencias
 		public static void Main (string[] args)
 		{
 			Application.Init ();
-			MainWindow win = new MainWindow ();
+			LoginWnd win = new LoginWnd ();
 			win.Show ();
 			Application.Run ();
 		}
