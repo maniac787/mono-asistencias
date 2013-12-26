@@ -20,7 +20,8 @@ namespace org.maniacSoft.form.login
 			global::Stetic.Gui.Initialize (this);
 			// Widget org.maniacSoft.form.login.LoginWnd
 			this.Name = "org.maniacSoft.form.login.LoginWnd";
-			this.Title = global::Mono.Unix.Catalog.GetString ("LoginWnd");
+			this.Title = global::Mono.Unix.Catalog.GetString ("Asistencia MAX");
+			this.Icon = global::Gdk.Pixbuf.LoadFromResource ("prjAsistencias.schedule.png");
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Container child org.maniacSoft.form.login.LoginWnd.Gtk.Container+ContainerChild
 			this.fixed1 = new global::Gtk.Fixed ();

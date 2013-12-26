@@ -211,7 +211,8 @@
   </widget>
   <widget class="Gtk.Window" id="org.maniacSoft.form.login.LoginWnd" design-size="406 214">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">LoginWnd</property>
+    <property name="Title" translatable="yes">Asistencia MAX</property>
+    <property name="Icon">resource:prjAsistencias.schedule.png</property>
     <property name="WindowPosition">CenterOnParent</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" after="yes" />
     <child>
