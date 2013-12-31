@@ -3,6 +3,7 @@ using NHibernate;
 using NHibernate.Cfg;
 using System.Collections.Generic;
 using System.Reflection;
+using log4net;
 
 namespace org.maniacSoft.attendance.commons.dataAccess
 {
@@ -12,10 +13,12 @@ namespace org.maniacSoft.attendance.commons.dataAccess
 		protected static ISessionFactory SessionFactory { get; set; }
 		private static ISession session = null;
 		private static IStatelessSession statelessSession = null;
+		private static ILog log = LogManager.GetLogger("development");
 
-		/*public NHibernateBase ()
+		public NHibernateBase()
 		{
-		}*/
+			log4net.Config.XmlConfigurator.Configure();
+		}
 
 		public static NHibernate.Cfg.Configuration ConfigureNHibernate(string assembly)
 		{
