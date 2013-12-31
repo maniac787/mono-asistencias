@@ -1,8 +1,7 @@
 using System;
 using Gtk;
 using prjAsistencias;
-using org.maniacSoft.util.conexion;
-using org.maniacSoft.test;
+
 
 
 public partial class MainWindow: Gtk.Window
@@ -29,7 +28,7 @@ public partial class MainWindow: Gtk.Window
 		*/
 
 
-		PostgreSqlConexion.Instance.iniciar();
+
 		ListStore store = new ListStore(typeof (string));
 		
 		
@@ -41,9 +40,7 @@ public partial class MainWindow: Gtk.Window
 		IngresoHorario ingresoHorario = new IngresoHorario();
 		ingresoHorario.init(((Calendar)sender).Date);
 		ingresoHorario.Show();
-		
-		TestConexion testConexion = new TestConexion();
-		testConexion.iniciar();
+
 		/*
 		HorarioDiario horarioDiario = new HorarioDiario();
 		horarioDiario.setDateTime(((Calendar)sender).Date);

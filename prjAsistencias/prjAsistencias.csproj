@@ -85,7 +85,6 @@
     <Folder Include="org\maniacSoft\commons\" />
     <Folder Include="org\maniacSoft\commons\utils\" />
     <Folder Include="commons\" />
-    <Folder Include="commons\libs\" />
     <Folder Include="commons\images\" />
   </ItemGroup>
   <ItemGroup>
@@ -93,9 +92,5 @@
       <Project>{177BC064-9ADC-4526-A5B6-9E95CC2D2962}</Project>
       <Name>prjAsistenciasCliente</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="commons\libs\Npgsql.dll" />
-    <None Include="commons\libs\NHibernate.dll" />
   </ItemGroup>
 </Project>

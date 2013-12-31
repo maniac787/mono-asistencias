@@ -1,5 +1,6 @@
 using System;
 using Gtk;
+using org.maniacSoft.attendance.commons.dataAccess;
 
 namespace org.maniacSoft.form.login
 {
@@ -22,6 +23,27 @@ namespace org.maniacSoft.form.login
 		protected void OnBtnLoginClicked (object sender, EventArgs e)
 		{
 			System.Console.WriteLine("Iniciando el login");
+
+			try{
+				NHibernateBase NHB = new NHibernateBase();
+				NHB.Initialize("prjAsistenciasCliente");
+				System.Console.WriteLine("NHibernate.GuitarStore assembly initialized.");
+				System.Console.ReadLine();
+			}
+			catch (Exception ex)
+			{
+				string message = ex.Message;
+				if (ex.InnerException != null)
+				{
+					message += " - InnerExcepetion: " + ex.InnerException.Message;
+				}
+				System.Console.WriteLine();
+				System.Console.WriteLine("***** ERROR *****");
+				System.Console.WriteLine(message);
+				System.Console.WriteLine();
+				System.Console.ReadLine();
+			}
+
 		}
 
 	}

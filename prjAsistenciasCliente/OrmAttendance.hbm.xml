@@ -4,7 +4,7 @@
 		<id name="userId" column="usr_id">
 		</id>
 		
-		<property name="usrName" column="usr_name"/>
+		<property name="userName" column="usr_name"/>
 		<property name="userPassword" column="usr_password"/>
 	</class>
 </hibernate-mapping>
