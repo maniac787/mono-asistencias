@@ -31,17 +31,14 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="Npgsql" />
+    <Reference Include="Npgsql">
+      <HintPath>..\prjAsistencias\commons\libs\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.5.10.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
       <Private>False</Private>
     </Reference>
-    <Reference Include="MonoDevelop.Debugger.Soft, Version=2.6.0.0, Culture=neutral">
-      <Private>False</Private>
-      <Package>monodevelop-core-addins</Package>
-    </Reference>
-    <Reference Include="MonoDevelop.Debugger, Version=2.6.0.0, Culture=neutral">
-      <Private>False</Private>
-      <Package>monodevelop-core-addins</Package>
+    <Reference Include="NHibernate">
+      <HintPath>commons\libs\NHibernate.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +49,7 @@
     <Compile Include="org\maniacSoft\commons\utils\conexion\PostgreSqlParameter.cs" />
     <Compile Include="org\maniacSoft\test\TestConexion.cs" />
     <Compile Include="org\maniacSoft\test\TestConexionBase.cs" />
+    <Compile Include="org\maniacSoft\attendance\dto\UserDto.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -62,9 +60,18 @@
     <Folder Include="org\maniacSoft\commons\" />
     <Folder Include="org\maniacSoft\commons\utils\" />
     <Folder Include="org\maniacSoft\test\" />
+    <Folder Include="org\maniacSoft\attendance\" />
+    <Folder Include="org\maniacSoft\attendance\dto\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="commons\libs\NHibernate.dll" />
-    <EmbeddedResource Include="commons\libs\Npgsql.dll" />
+    <EmbeddedResource Include="commons\libs\NHibernate.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="commons\libs\Npgsql.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrmAttendance.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
