@@ -79,17 +79,20 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="IngresoHorario.cs" />
     <Compile Include="gtk-gui\prjAsistencias.IngresoHorario.cs" />
-    <Compile Include="common\util\HorarioDia.cs" />
-    <Compile Include="common\util\TestConexion.cs" />
     <Compile Include="gtk-gui\org.maniacSoft.form.login.LoginWnd.cs" />
     <Compile Include="org\maniacSoft\form\login\LoginWnd.cs" />
+    <Compile Include="org\maniacSoft\commons\utils\HorarioDia.cs" />
+    <Compile Include="org\maniacSoft\commons\utils\TestConexion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="common\" />
-    <Folder Include="common\util\" />
     <Folder Include="org\" />
     <Folder Include="org\maniacSoft\" />
+    <Folder Include="org\maniacSoft\commons\" />
+    <Folder Include="org\maniacSoft\commons\utils\" />
+    <Folder Include="commons\" />
+    <Folder Include="commons\libs\" />
+    <Folder Include="commons\images\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\prjAsistenciasCliente\prjAsistenciasCliente.csproj">
