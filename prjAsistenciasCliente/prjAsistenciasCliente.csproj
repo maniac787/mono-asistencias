@@ -30,19 +30,29 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="Npgsql" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyClass.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="org\maniacSoft\util\conexion\PostgreSqlConexion.cs" />
-    <Compile Include="org\maniacSoft\util\conexion\IPostgreSqlConexion.cs" />
-    <Compile Include="org\maniacSoft\util\conexion\PostgreSqlParameter.cs" />
+    <Compile Include="org\maniacSoft\commons\utils\conexion\PostgreSqlConexion.cs" />
+    <Compile Include="org\maniacSoft\commons\utils\conexion\IPostgreSqlConexion.cs" />
+    <Compile Include="org\maniacSoft\commons\utils\conexion\PostgreSqlParameter.cs" />
+    <Compile Include="org\maniacSoft\test\TestConexion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="org\" />
     <Folder Include="org\maniacSoft\" />
-    <Folder Include="org\maniacSoft\util\" />
-    <Folder Include="org\maniacSoft\util\conexion\" />
+    <Folder Include="commons\" />
+    <Folder Include="commons\libs\" />
+    <Folder Include="org\maniacSoft\commons\" />
+    <Folder Include="org\maniacSoft\commons\utils\" />
+    <Folder Include="org\maniacSoft\test\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="commons\libs\NHibernate.dll" />
+    <EmbeddedResource Include="commons\libs\Npgsql.dll" />
   </ItemGroup>
 </Project>

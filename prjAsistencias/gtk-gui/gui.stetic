@@ -11,6 +11,7 @@
   <widget class="Gtk.Window" id="MainWindow" design-size="476 304">
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
+    <property name="Icon">resource:prjAsistencias.commons.images.calendar.png</property>
     <property name="WindowPosition">CenterOnParent</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
@@ -212,7 +213,7 @@
   <widget class="Gtk.Window" id="org.maniacSoft.form.login.LoginWnd" design-size="406 214">
     <property name="MemberName" />
     <property name="Title" translatable="yes">Asistencia MAX</property>
-    <property name="Icon">resource:prjAsistencias.schedule.png</property>
+    <property name="Icon">resource:prjAsistencias.commons.images.calendar.png</property>
     <property name="WindowPosition">CenterOnParent</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" after="yes" />
     <child>

@@ -17,7 +17,7 @@ namespace org.maniacSoft.util.conexion {
 		}
 
 		public void iniciar() {
-			PostgreSqlParameter postgreSqlParameter = new PostgreSqlParameter("127.0.0.1","postgres", "admin", "smx");
+			//PostgreSqlParameter postgreSqlParameter = new PostgreSqlParameter("127.0.0.1","postgres", "admin", "smx");
 		}
 
 		public override string ToString ()

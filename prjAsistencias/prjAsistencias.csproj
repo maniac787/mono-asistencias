@@ -57,9 +57,6 @@
       <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="Mono.Posix" />
-    <Reference Include="Npgsql">
-      <HintPath>..\..\Downloads\Npgsql2.0.13.91\Mono2.0\bin\Npgsql.dll</HintPath>
-    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
@@ -67,9 +64,7 @@
     <EmbeddedResource Include="gtk-gui\gui.stetic">
       <LogicalName>gui.stetic</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="..\..\..\..\dos\descargas\schedule.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="commons\images\calendar.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -82,7 +77,6 @@
     <Compile Include="gtk-gui\org.maniacSoft.form.login.LoginWnd.cs" />
     <Compile Include="org\maniacSoft\form\login\LoginWnd.cs" />
     <Compile Include="org\maniacSoft\commons\utils\HorarioDia.cs" />
-    <Compile Include="org\maniacSoft\commons\utils\TestConexion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -99,5 +93,9 @@
       <Project>{177BC064-9ADC-4526-A5B6-9E95CC2D2962}</Project>
       <Name>prjAsistenciasCliente</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="commons\libs\Npgsql.dll" />
+    <None Include="commons\libs\NHibernate.dll" />
   </ItemGroup>
 </Project>
