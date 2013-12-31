@@ -54,12 +54,14 @@
     <Folder Include="org\maniacSoft\attendance\" />
     <Folder Include="org\maniacSoft\attendance\dto\" />
     <Folder Include="org\maniacSoft\attendance\commons\" />
+    <Folder Include="org\maniacSoft\attendance\commons\resources\" />
+    <Folder Include="org\maniacSoft\attendance\commons\resources\mapping\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="OrmAttendance.hbm.xml">
+    <EmbeddedResource Include="App.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="App.config">
+    <EmbeddedResource Include="org\maniacSoft\attendance\commons\resources\mapping\OrmAttendance.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
