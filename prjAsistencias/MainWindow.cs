@@ -2,6 +2,9 @@ using System;
 using Gtk;
 using prjAsistencias;
 using org.maniacSoft.util.conexion;
+using org.maniacSoft.test;
+
+
 public partial class MainWindow: Gtk.Window
 {	
 	public MainWindow (): base (Gtk.WindowType.Toplevel)

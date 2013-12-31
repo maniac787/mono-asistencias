@@ -3,7 +3,7 @@ using System;
 using System.Data;
 using Npgsql;
  
-namespace prjAsistencias {
+namespace org.maniacSoft.test {
   public class TestConexion {
     public TestConexion () {
     }
