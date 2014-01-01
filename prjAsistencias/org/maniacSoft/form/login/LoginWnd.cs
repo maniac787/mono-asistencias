@@ -32,26 +32,19 @@ namespace org.maniacSoft.form.login
 				NHB.Initialize("prjAsistenciasCliente");
 
 				ISecurityService securityService = new SecurityService();
-				UserDto tmp = securityService.findUserAccess(this.entry1.Text,this.entry2.Text);
+				UserDto tmp = securityService.findUserAccess(this.txtUser.Text,this.txtPassword.Text);
+				this.eventboxMessage.Visible = false;
+				this.Visible = false;
 
-				this.entry1.Text = tmp.userPassword;
-
-
-				List<UserDto> list = (List<UserDto>)NHB.ExecuteICriteria<UserDto>();
-				
-				foreach (UserDto userDto in list)
-				{
-					System.Console.WriteLine("*****\nuserId..: {0}\tuserName...: {1}\n", userDto.userId, userDto.userName);
-
-
-				}
-
-
-				System.Console.WriteLine("Fin");
+				MainWindow mainWindow = new MainWindow();
+				mainWindow.Show ();
 			}
 			catch (Exception ex)
 			{
 				string message = ex.Message;
+				this.eventboxMessage.Visible = true;
+				this.lblErrorLog.LabelProp = "<b>"+message+"</b>";
+
 				if (ex.InnerException != null)
 				{
 					message += " - InnerExcepetion: " + ex.InnerException.Message;
@@ -64,7 +57,6 @@ namespace org.maniacSoft.form.login
 			}
 
 		}
-
 	}
 }
 
