@@ -3,6 +3,7 @@ using Gtk;
 using org.maniacSoft.attendance.commons.dataAccess;
 using System.Collections.Generic;
 using org.maniacSoft.attendance.dto;
+using org.maniacSoft.attendance.service;
 
 namespace org.maniacSoft.form.login
 {
@@ -29,8 +30,12 @@ namespace org.maniacSoft.form.login
 			try{
 				NHibernateBase NHB = new NHibernateBase();
 				NHB.Initialize("prjAsistenciasCliente");
-				System.Console.WriteLine("NHibernate.GuitarStore assembly initialized.");
-				System.Console.ReadLine();
+
+				ISecurityService securityService = new SecurityService();
+				UserDto tmp = securityService.findUserAccess(this.entry1.Text,this.entry2.Text);
+
+				this.entry1.Text = tmp.userPassword;
+
 
 				List<UserDto> list = (List<UserDto>)NHB.ExecuteICriteria<UserDto>();
 				
@@ -38,7 +43,7 @@ namespace org.maniacSoft.form.login
 				{
 					System.Console.WriteLine("*****\nuserId..: {0}\tuserName...: {1}\n", userDto.userId, userDto.userName);
 
-					this.entry1.Text = userDto.userName;
+
 				}
 
 

@@ -40,12 +40,15 @@
     <Reference Include="log4net">
       <HintPath>..\..\..\..\dos\descargas\NHibernate-3.3.3.SP1-bin\Tests\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="org\maniacSoft\attendance\dto\UserDto.cs" />
     <Compile Include="org\maniacSoft\attendance\commons\dataAccess\NHibernateBase.cs" />
     <Compile Include="org\maniacSoft\test\TestConexion.cs" />
+    <Compile Include="org\maniacSoft\attendance\service\ISecurityService.cs" />
+    <Compile Include="org\maniacSoft\attendance\service\SecurityService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -59,12 +62,14 @@
     <Folder Include="org\maniacSoft\attendance\commons\" />
     <Folder Include="org\maniacSoft\attendance\commons\resources\" />
     <Folder Include="org\maniacSoft\attendance\commons\resources\mapping\" />
+    <Folder Include="org\maniacSoft\attendance\service\" />
+    <Folder Include="org\maniacSoft\attendance\gestor\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="App.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="org\maniacSoft\attendance\commons\resources\mapping\OrmAttendance.hbm.xml" />
     <EmbeddedResource Include="org\maniacSoft\attendance\commons\resources\mapping\hibernate.cfg.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
 </Project>

@@ -4,6 +4,7 @@ using NHibernate.Cfg;
 using System.Collections.Generic;
 using System.Reflection;
 using log4net;
+using NHibernate.Criterion;
 
 namespace org.maniacSoft.attendance.commons.dataAccess
 {
@@ -77,6 +78,24 @@ namespace org.maniacSoft.attendance.commons.dataAccess
 				try
 				{
 					IList<T> result = Session.CreateCriteria(typeof(T)).List<T>();
+					transaction.Commit();
+					return result;
+				}
+				catch (Exception ex)
+				{
+					transaction.Rollback();
+					throw;
+				}
+			}
+		}
+
+		public IList<T> ExecuteICriteria<T>(ICriterion expression)
+		{
+			using (ITransaction transaction = Session.BeginTransaction())
+			{
+				try
+				{
+					IList<T> result = Session.CreateCriteria(typeof(T)).Add(expression).List<T>();
 					transaction.Commit();
 					return result;
 				}
