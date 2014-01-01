@@ -23,9 +23,15 @@ namespace org.maniacSoft.attendance.commons.dataAccess
 		public static NHibernate.Cfg.Configuration ConfigureNHibernate(string assembly)
 		{
 
-			Configuration = new NHibernate.Cfg.Configuration();
+			Configuration = new NHibernate.Cfg.Configuration();//.Configure("org/maniacSoft/attendance/commons/resources/mapping/hibernate.cfg.xml");
+			Configuration.SetProperty(NHibernate.Cfg.Environment.Dialect, "NHibernate.Dialect.PostgreSQLDialect");
+			Configuration.SetProperty(NHibernate.Cfg.Environment.ConnectionDriver, "NHibernate.Driver.NpgsqlDriver");
+			Configuration.SetProperty(NHibernate.Cfg.Environment.ConnectionString, @"Server=localhost;Port=5432;User Id=postgres;Password=admin;Database=smx");
+
 
 			Configuration.AddAssembly(assembly);
+
+
 			//Configuration.AddAssembly(Assembly.GetCallingAssembly());
 			//Configuration.SetProperty(NHibernate.Cfg.Environment.Dialect, "NHibernate.Dialect.PostgreSQLDialect");
 			return Configuration;
@@ -35,6 +41,7 @@ namespace org.maniacSoft.attendance.commons.dataAccess
 			Configuration = ConfigureNHibernate(assembly);
 
 			SessionFactory = Configuration.BuildSessionFactory();
+
 		}
 
 		public static ISession Session

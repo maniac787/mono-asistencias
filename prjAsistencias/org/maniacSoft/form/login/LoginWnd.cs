@@ -1,6 +1,8 @@
 using System;
 using Gtk;
 using org.maniacSoft.attendance.commons.dataAccess;
+using System.Collections.Generic;
+using org.maniacSoft.attendance.dto;
 
 namespace org.maniacSoft.form.login
 {
@@ -29,6 +31,14 @@ namespace org.maniacSoft.form.login
 				NHB.Initialize("prjAsistenciasCliente");
 				System.Console.WriteLine("NHibernate.GuitarStore assembly initialized.");
 				System.Console.ReadLine();
+
+				List<UserDto> list = (List<UserDto>)NHB.ExecuteICriteria<UserDto>();
+				
+				foreach (UserDto userDto in list)
+				{
+					System.Console.WriteLine("*****\nuserId..: {0}\tuserName...: {1}\n", userDto.userId, userDto.userName);
+				}
+				System.Console.WriteLine("Fin");
 			}
 			catch (Exception ex)
 			{

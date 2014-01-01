@@ -59,6 +59,21 @@
     <Reference Include="Mono.Posix" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="log4net">
+      <HintPath>..\..\..\..\dos\descargas\NHibernate-3.3.3.SP1-bin\Tests\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\..\dos\descargas\NHibernate-3.3.3.SP1-bin\Required_Bins\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\..\..\dos\descargas\NHibernate-3.3.3.SP1-bin\Required_Bins\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\Downloads\Npgsql2.0.13.91\Mono2.0\bin\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="policy.2.0.Npgsql">
+      <HintPath>..\..\Downloads\Npgsql2.0.13.91\Mono2.0\bin\policy.2.0.Npgsql.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">

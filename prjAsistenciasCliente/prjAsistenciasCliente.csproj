@@ -64,7 +64,8 @@
     <EmbeddedResource Include="App.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="org\maniacSoft\attendance\commons\resources\mapping\OrmAttendance.hbm.xml">
+    <EmbeddedResource Include="org\maniacSoft\attendance\commons\resources\mapping\OrmAttendance.hbm.xml" />
+    <EmbeddedResource Include="org\maniacSoft\attendance\commons\resources\mapping\hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
