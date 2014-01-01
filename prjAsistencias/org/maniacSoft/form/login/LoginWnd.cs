@@ -37,7 +37,11 @@ namespace org.maniacSoft.form.login
 				foreach (UserDto userDto in list)
 				{
 					System.Console.WriteLine("*****\nuserId..: {0}\tuserName...: {1}\n", userDto.userId, userDto.userName);
+
+					this.entry1.Text = userDto.userName;
 				}
+
+
 				System.Console.WriteLine("Fin");
 			}
 			catch (Exception ex)
