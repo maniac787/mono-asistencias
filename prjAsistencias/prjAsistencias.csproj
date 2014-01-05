@@ -82,6 +82,12 @@
     <EmbeddedResource Include="commons\images\calendar.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="commons\images\monologolpg.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="commons\images\key.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -94,6 +100,8 @@
     <Compile Include="gtk-gui\org.maniacSoft.form.login.LoginWnd.cs" />
     <Compile Include="org\maniacSoft\form\login\LoginWnd.cs" />
     <Compile Include="org\maniacSoft\commons\utils\HorarioDia.cs" />
+    <Compile Include="org\maniacSoft\form\attendance\CalendarDateSelectWnd.cs" />
+    <Compile Include="gtk-gui\prjAsistencias.CalendarDateSelectWnd.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -103,6 +111,7 @@
     <Folder Include="org\maniacSoft\commons\utils\" />
     <Folder Include="commons\" />
     <Folder Include="commons\images\" />
+    <Folder Include="org\maniacSoft\form\attendance\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\prjAsistenciasCliente\prjAsistenciasCliente.csproj">

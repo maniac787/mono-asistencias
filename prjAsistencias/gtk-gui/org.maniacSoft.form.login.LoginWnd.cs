@@ -5,6 +5,12 @@ namespace org.maniacSoft.form.login
 	public partial class LoginWnd
 	{
 		private global::Gtk.Fixed fixed1;
+		private global::Gtk.EventBox eventboxMessage;
+		private global::Gtk.Table tblMessage;
+		private global::Gtk.Image imgErrorLog;
+		private global::Gtk.Label lblErrorLog;
+		private global::Gtk.Button btnLogin;
+		private global::Gtk.Image imgLogo;
 		private global::Gtk.Frame frame1;
 		private global::Gtk.Alignment GtkAlignment;
 		private global::Gtk.Table table1;
@@ -13,11 +19,6 @@ namespace org.maniacSoft.form.login
 		private global::Gtk.Entry txtPassword;
 		private global::Gtk.Entry txtUser;
 		private global::Gtk.Label GtkLabel1;
-		private global::Gtk.Button btnLogin;
-		private global::Gtk.EventBox eventboxMessage;
-		private global::Gtk.Table tblMessage;
-		private global::Gtk.Image imgErrorLog;
-		private global::Gtk.Label lblErrorLog;
 		
 		protected virtual void Build ()
 		{
@@ -26,10 +27,81 @@ namespace org.maniacSoft.form.login
 			this.Name = "org.maniacSoft.form.login.LoginWnd";
 			this.Title = global::Mono.Unix.Catalog.GetString ("Asistencia MAX");
 			this.Icon = global::Gdk.Pixbuf.LoadFromResource ("prjAsistencias.commons.images.calendar.png");
-			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+			this.TypeHint = ((global::Gdk.WindowTypeHint)(1));
+			this.WindowPosition = ((global::Gtk.WindowPosition)(1));
+			this.Modal = true;
+			this.Resizable = false;
+			this.AllowGrow = false;
+			this.Gravity = ((global::Gdk.Gravity)(5));
 			// Container child org.maniacSoft.form.login.LoginWnd.Gtk.Container+ContainerChild
 			this.fixed1 = new global::Gtk.Fixed ();
+			this.fixed1.Name = "fixed1";
 			this.fixed1.HasWindow = false;
+			// Container child fixed1.Gtk.Fixed+FixedChild
+			this.eventboxMessage = new global::Gtk.EventBox ();
+			this.eventboxMessage.Name = "eventboxMessage";
+			// Container child eventboxMessage.Gtk.Container+ContainerChild
+			this.tblMessage = new global::Gtk.Table (((uint)(1)), ((uint)(2)), false);
+			this.tblMessage.Name = "tblMessage";
+			this.tblMessage.RowSpacing = ((uint)(6));
+			this.tblMessage.ColumnSpacing = ((uint)(6));
+			// Container child tblMessage.Gtk.Table+TableChild
+			this.imgErrorLog = new global::Gtk.Image ();
+			this.imgErrorLog.Name = "imgErrorLog";
+			this.imgErrorLog.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("prjAsistencias.commons.images.calendar.png");
+			this.tblMessage.Add (this.imgErrorLog);
+			global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.tblMessage [this.imgErrorLog]));
+			w1.XOptions = ((global::Gtk.AttachOptions)(4));
+			w1.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tblMessage.Gtk.Table+TableChild
+			this.lblErrorLog = new global::Gtk.Label ();
+			this.lblErrorLog.Name = "lblErrorLog";
+			this.lblErrorLog.LabelProp = global::Mono.Unix.Catalog.GetString ("label2");
+			this.lblErrorLog.UseMarkup = true;
+			this.tblMessage.Add (this.lblErrorLog);
+			global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.tblMessage [this.lblErrorLog]));
+			w2.LeftAttach = ((uint)(1));
+			w2.RightAttach = ((uint)(2));
+			w2.XOptions = ((global::Gtk.AttachOptions)(4));
+			w2.YOptions = ((global::Gtk.AttachOptions)(4));
+			this.eventboxMessage.Add (this.tblMessage);
+			this.fixed1.Add (this.eventboxMessage);
+			global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.eventboxMessage]));
+			w4.Y = 220;
+			// Container child fixed1.Gtk.Fixed+FixedChild
+			this.btnLogin = new global::Gtk.Button ();
+			this.btnLogin.CanFocus = true;
+			this.btnLogin.Name = "btnLogin";
+			this.btnLogin.UseUnderline = true;
+			this.btnLogin.BorderWidth = ((uint)(1));
+			// Container child btnLogin.Gtk.Container+ContainerChild
+			global::Gtk.Alignment w5 = new global::Gtk.Alignment (0.5F, 0.5F, 0F, 0F);
+			// Container child GtkAlignment.Gtk.Container+ContainerChild
+			global::Gtk.HBox w6 = new global::Gtk.HBox ();
+			w6.Spacing = 2;
+			// Container child GtkHBox.Gtk.Container+ContainerChild
+			global::Gtk.Image w7 = new global::Gtk.Image ();
+			w7.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("prjAsistencias.commons.images.key.gif");
+			w6.Add (w7);
+			// Container child GtkHBox.Gtk.Container+ContainerChild
+			global::Gtk.Label w9 = new global::Gtk.Label ();
+			w9.LabelProp = global::Mono.Unix.Catalog.GetString ("Iniciar");
+			w9.UseUnderline = true;
+			w6.Add (w9);
+			w5.Add (w6);
+			this.btnLogin.Add (w5);
+			this.fixed1.Add (this.btnLogin);
+			global::Gtk.Fixed.FixedChild w13 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.btnLogin]));
+			w13.X = 80;
+			w13.Y = 110;
+			// Container child fixed1.Gtk.Fixed+FixedChild
+			this.imgLogo = new global::Gtk.Image ();
+			this.imgLogo.Sensitive = false;
+			this.imgLogo.Name = "imgLogo";
+			this.imgLogo.Xalign = 0F;
+			this.imgLogo.Yalign = 0F;
+			this.imgLogo.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("prjAsistencias.commons.images.monologolpg.gif");
+			this.fixed1.Add (this.imgLogo);
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.frame1 = new global::Gtk.Frame ();
 			this.frame1.Name = "frame1";
@@ -48,19 +120,19 @@ namespace org.maniacSoft.form.login
 			this.label1.Name = "label1";
 			this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("Usuario");
 			this.table1.Add (this.label1);
-			global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.table1 [this.label1]));
-			w1.XOptions = ((global::Gtk.AttachOptions)(4));
-			w1.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w15 = ((global::Gtk.Table.TableChild)(this.table1 [this.label1]));
+			w15.XOptions = ((global::Gtk.AttachOptions)(4));
+			w15.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
 			this.label2 = new global::Gtk.Label ();
 			this.label2.Name = "label2";
 			this.label2.LabelProp = global::Mono.Unix.Catalog.GetString ("Clave");
 			this.table1.Add (this.label2);
-			global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.table1 [this.label2]));
-			w2.TopAttach = ((uint)(1));
-			w2.BottomAttach = ((uint)(2));
-			w2.XOptions = ((global::Gtk.AttachOptions)(4));
-			w2.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w16 = ((global::Gtk.Table.TableChild)(this.table1 [this.label2]));
+			w16.TopAttach = ((uint)(1));
+			w16.BottomAttach = ((uint)(2));
+			w16.XOptions = ((global::Gtk.AttachOptions)(4));
+			w16.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
 			this.txtPassword = new global::Gtk.Entry ();
 			this.txtPassword.CanFocus = true;
@@ -69,12 +141,12 @@ namespace org.maniacSoft.form.login
 			this.txtPassword.Visibility = false;
 			this.txtPassword.InvisibleChar = '•';
 			this.table1.Add (this.txtPassword);
-			global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.table1 [this.txtPassword]));
-			w3.TopAttach = ((uint)(1));
-			w3.BottomAttach = ((uint)(2));
-			w3.LeftAttach = ((uint)(1));
-			w3.RightAttach = ((uint)(2));
-			w3.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w17 = ((global::Gtk.Table.TableChild)(this.table1 [this.txtPassword]));
+			w17.TopAttach = ((uint)(1));
+			w17.BottomAttach = ((uint)(2));
+			w17.LeftAttach = ((uint)(1));
+			w17.RightAttach = ((uint)(2));
+			w17.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
 			this.txtUser = new global::Gtk.Entry ();
 			this.txtUser.CanFocus = true;
@@ -82,10 +154,10 @@ namespace org.maniacSoft.form.login
 			this.txtUser.IsEditable = true;
 			this.txtUser.InvisibleChar = '•';
 			this.table1.Add (this.txtUser);
-			global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.table1 [this.txtUser]));
-			w4.LeftAttach = ((uint)(1));
-			w4.RightAttach = ((uint)(2));
-			w4.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w18 = ((global::Gtk.Table.TableChild)(this.table1 [this.txtUser]));
+			w18.LeftAttach = ((uint)(1));
+			w18.RightAttach = ((uint)(2));
+			w18.YOptions = ((global::Gtk.AttachOptions)(4));
 			this.GtkAlignment.Add (this.table1);
 			this.frame1.Add (this.GtkAlignment);
 			this.GtkLabel1 = new global::Gtk.Label ();
@@ -94,57 +166,14 @@ namespace org.maniacSoft.form.login
 			this.GtkLabel1.UseMarkup = true;
 			this.frame1.LabelWidget = this.GtkLabel1;
 			this.fixed1.Add (this.frame1);
-			global::Gtk.Fixed.FixedChild w7 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.frame1]));
-			w7.X = 32;
-			w7.Y = 19;
-			// Container child fixed1.Gtk.Fixed+FixedChild
-			this.btnLogin = new global::Gtk.Button ();
-			this.btnLogin.CanFocus = true;
-			this.btnLogin.Name = "btnLogin";
-			this.btnLogin.UseUnderline = true;
-			this.btnLogin.Label = global::Mono.Unix.Catalog.GetString ("Iniciar");
-			this.fixed1.Add (this.btnLogin);
-			global::Gtk.Fixed.FixedChild w8 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.btnLogin]));
-			w8.X = 118;
-			w8.Y = 105;
-			// Container child fixed1.Gtk.Fixed+FixedChild
-			this.eventboxMessage = new global::Gtk.EventBox ();
-			this.eventboxMessage.Name = "eventboxMessage";
-			// Container child eventboxMessage.Gtk.Container+ContainerChild
-			this.tblMessage = new global::Gtk.Table (((uint)(1)), ((uint)(2)), false);
-			this.tblMessage.Name = "tblMessage";
-			this.tblMessage.RowSpacing = ((uint)(6));
-			this.tblMessage.ColumnSpacing = ((uint)(6));
-			// Container child tblMessage.Gtk.Table+TableChild
-			this.imgErrorLog = new global::Gtk.Image ();
-			this.imgErrorLog.Name = "imgErrorLog";
-			this.imgErrorLog.Pixbuf = global::Gdk.Pixbuf.LoadFromResource ("prjAsistencias.commons.images.calendar.png");
-			this.tblMessage.Add (this.imgErrorLog);
-			global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.tblMessage [this.imgErrorLog]));
-			w9.XOptions = ((global::Gtk.AttachOptions)(4));
-			w9.YOptions = ((global::Gtk.AttachOptions)(4));
-			// Container child tblMessage.Gtk.Table+TableChild
-			this.lblErrorLog = new global::Gtk.Label ();
-			this.lblErrorLog.Name = "lblErrorLog";
-			this.lblErrorLog.LabelProp = global::Mono.Unix.Catalog.GetString ("label2");
-			this.lblErrorLog.UseMarkup = true;
-			this.tblMessage.Add (this.lblErrorLog);
-			global::Gtk.Table.TableChild w10 = ((global::Gtk.Table.TableChild)(this.tblMessage [this.lblErrorLog]));
-			w10.LeftAttach = ((uint)(1));
-			w10.RightAttach = ((uint)(2));
-			w10.XOptions = ((global::Gtk.AttachOptions)(4));
-			w10.YOptions = ((global::Gtk.AttachOptions)(4));
-			this.eventboxMessage.Add (this.tblMessage);
-			this.fixed1.Add (this.eventboxMessage);
-			global::Gtk.Fixed.FixedChild w12 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.eventboxMessage]));
-			w12.X = 110;
-			w12.Y = 144;
+			global::Gtk.Fixed.FixedChild w21 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.frame1]));
+			w21.Y = 19;
 			this.Add (this.fixed1);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
 			}
-			this.DefaultWidth = 406;
-			this.DefaultHeight = 249;
+			this.DefaultWidth = 232;
+			this.DefaultHeight = 289;
 			this.eventboxMessage.Hide ();
 			this.Show ();
 			this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
